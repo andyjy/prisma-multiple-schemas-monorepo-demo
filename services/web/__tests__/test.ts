@@ -2,8 +2,8 @@ import { test, expect } from "@jest/globals";
 import fs from "fs";
 import path from "path";
 
-import { PrismaClient as PrismaClientSchemaA } from "~internal/prisma_schemaA/client";
-import { PrismaClient as PrismaClientSchemaB } from "~internal/prisma_schemaB/client";
+import { PrismaClient as PrismaClientSchemaA } from "prisma_schemaA/client";
+import { PrismaClient as PrismaClientSchemaB } from "prisma_schemaB/client";
 
 test("schema A is callable", async () => {
   const prismaSchemaA = new PrismaClientSchemaA();
@@ -22,7 +22,7 @@ test("schema A prisma client has been generated to correct location", () => {
     fs.existsSync(
       path.resolve(
         __dirname,
-        "../../../node_modules/~internal/prisma_schemaA/client/index.js"
+        "../../../node_modules/prisma_schemaA/client/index.js"
       )
     )
   ).toBe(true);
@@ -33,7 +33,7 @@ test("schema B prisma client has been generated to correct location", () => {
     fs.existsSync(
       path.resolve(
         __dirname,
-        "../../../node_modules/~internal/prisma_schemaB/client/index.js"
+        "../../../node_modules/prisma_schemaB/client/index.js"
       )
     )
   ).toBe(true);
