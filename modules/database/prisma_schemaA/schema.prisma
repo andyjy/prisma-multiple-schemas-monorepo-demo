@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@~internal/prisma_schemaA/client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./schemaA.db"
+}
+
+model modelA {
+    id Int @id @default(autoincrement())
+}

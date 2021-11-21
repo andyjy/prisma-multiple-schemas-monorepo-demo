@@ -1,0 +1,18 @@
+{
+  "name": "@~internal/database",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm run prisma:generate",
+    "prisma:generate": "npx prisma generate --schema=./prisma_schemaA/schema.prisma ; npx prisma generate --schema=./prisma_schemaB/schema.prisma",
+    "prisma:migrate:dev": "npx prisma migrate dev --schema=./prisma_schemaA/schema.prisma ; npx prisma migrate dev --schema=./prisma_schemaB/schema.prisma",
+    "prisma:migrate:deploy": "npx prisma migrate deploy --schema=./prisma_schemaA/schema.prisma ; npx prisma migrate deploy --schema=./prisma_schemaB/schema.prisma"
+  },
+  "type": "module",
+  "devDependencies": {
+    "prisma": "^3.1.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.1.1"
+  }
+}
