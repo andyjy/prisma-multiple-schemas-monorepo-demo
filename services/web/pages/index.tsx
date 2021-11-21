@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import { ReactElement } from "react";
-import { PrismaClient as PrismaClientSchemaA } from "@~internal/prisma_schemaA/client";
-import { PrismaClient as PrismaClientSchemaB } from "@~internal/prisma_schemaB/client";
+import { PrismaClient as PrismaClientSchemaA } from "~internal/prisma_schemaA/client";
+import { PrismaClient as PrismaClientSchemaB } from "~internal/prisma_schemaB/client";
 
 export const getStaticProps: GetStaticProps = async () => {
   const prismaSchemaA = new PrismaClientSchemaA();
